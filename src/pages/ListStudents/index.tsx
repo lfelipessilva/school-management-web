@@ -1,8 +1,7 @@
 
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-
-import { Container, Table, Title } from './styles'
+import { Container, Title } from './styles'
 import { Student } from '../../types/Student'
 import { PersonListTable } from '../../components/PersonListTable'
 import { CreatePerson } from '../../components/CreatePerson'
@@ -27,10 +26,10 @@ export const ListStudent = () => {
                 Estudantes Cadastrados
             </Title>
 
-            <CreatePerson personType={'student'}/>
-
             <PersonListTable people={students} />
 
+            <CreatePerson personType={'student'} />
+            
         </Container>
     )
 }

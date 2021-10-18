@@ -12,7 +12,6 @@ export const CreatePerson = ({ personType}: Props) => {
     const [cpf, setCpf] = useState('')
     
     const handleCreatePerson = async () => {
-        console.log(name);
         try {
             await axios.post(`http://localhost:3001/${personType}`, {
                 name: name,
