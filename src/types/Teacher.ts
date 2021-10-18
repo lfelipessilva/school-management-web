@@ -1,7 +1,7 @@
 export type Teacher = {
-    id: string;
-    name: string;
-    cpf: string;
+    id: String;
+    name: String;
+    cpf: String;
     createdAt: Date;
     updatedAt: Date;
 }

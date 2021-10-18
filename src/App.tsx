@@ -1,13 +1,13 @@
 import { BrowserRouter, Route} from 'react-router-dom'
 
-import { CreateStudent } from './pages/createStudent'
-import { CreateTeacher } from './pages/createTeacher'
+import { ListStudent } from './pages/ListStudents'
+import { ListTeacher } from './pages/ListTeacher'
 
 function App() {
   return (
     <BrowserRouter>
-      <Route path='/teacher' component={CreateTeacher} />
-      <Route path='/student' component={CreateStudent} />
+      <Route path='/teacher' component={ListTeacher} />
+      <Route path='/student' component={ListStudent} />
     </BrowserRouter>
   );
 }

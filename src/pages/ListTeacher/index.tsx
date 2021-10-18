@@ -1,7 +1,7 @@
 
 import { Container } from './styles'
 
-export const CreateTeacher = () => {
+export const ListTeacher = () => {
     return (
         <Container>
             teacher
