@@ -5,6 +5,7 @@ import { Container, Title } from './styles'
 import { Teacher } from '../../types/Teacher'
 import { PersonListTable } from '../../components/PersonListTable'
 import { CreatePerson } from '../../components/CreatePerson'
+import { SideBar } from '../../components/SideBar'
 
 export const ListTeacher = () => {
 
@@ -21,6 +22,8 @@ export const ListTeacher = () => {
 
 
     return (
+        <>
+        <SideBar />
         <Container>
             <Title>
                 Professores Cadastrados
@@ -31,5 +34,6 @@ export const ListTeacher = () => {
             <CreatePerson personType={'teacher'} />
 
         </Container>
+        </>
     )
 }

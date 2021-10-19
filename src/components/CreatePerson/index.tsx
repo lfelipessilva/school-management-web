@@ -6,7 +6,7 @@ type Props = {
     personType: String;
 }
 
-export const CreatePerson = ({ personType}: Props) => {
+export const CreatePerson = ({ personType }: Props) => {
 
     const [name, setName] = useState('')
     const [cpf, setCpf] = useState('')
@@ -23,19 +23,21 @@ export const CreatePerson = ({ personType}: Props) => {
         
     }
     return (
+        <>
+
         <Container>
 
             Adicionar Pessoa
             
             <input 
-            type="text"
-            value={name}
-            placeholder="Nome"
-            onChange={e => setName(e.target.value)}
+                type="text"
+                value={name}
+                placeholder="Nome"
+                onChange={e => setName(e.target.value)}
             />
 
             <input
-                type="text"
+                type="text" 
                 value={cpf}
                 placeholder="CPF"
                 onChange={e => setCpf(e.target.value)}
@@ -43,6 +45,7 @@ export const CreatePerson = ({ personType}: Props) => {
 
             <button onClick={handleCreatePerson}>Adicionar</button>
         </Container>
+        </>
     )
 
 }

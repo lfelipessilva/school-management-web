@@ -1,10 +1,11 @@
 
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Container, Title } from './styles'
+import { Container, Title, Content } from './styles'
 import { Student } from '../../types/Student'
 import { PersonListTable } from '../../components/PersonListTable'
 import { CreatePerson } from '../../components/CreatePerson'
+import { SideBar } from '../../components/SideBar'
 
 export const ListStudent = () => {
 
@@ -22,14 +23,18 @@ export const ListStudent = () => {
 
     return (
         <Container>
-            <Title>
-                Estudantes Cadastrados
-            </Title>
+            <SideBar />
+            <Content>
 
-            <PersonListTable people={students} />
+                <Title>
+                    Estudantes Cadastrados
+                </Title>
 
-            <CreatePerson personType={'student'} />
+                <PersonListTable people={students} />
+
+                <CreatePerson personType={'student'} />
             
+            </Content>
         </Container>
     )
 }

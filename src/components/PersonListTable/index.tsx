@@ -14,14 +14,14 @@ export const PersonListTable = ({ people }: Props) => {
                 <TableHead width={25}>CPF</TableHead>
                 <TableHead width={25}>Criação</TableHead>
             </TableHeadRow>
-                {people.map(person => (
-                    <TableRow>
-                        <TableItem width={25}>{person.id}</TableItem>
-                        <TableItem width={25}>{person.name}</TableItem>
-                        <TableItem width={25}>{person.cpf}</TableItem>
-                        <TableItem width={25}>{person.createdAt}</TableItem>
-                    </TableRow>
-                ))}
+            {people.map(person => (
+                <TableRow>
+                    <TableItem width={25}>{person.id}</TableItem>
+                    <TableItem width={25}>{person.name}</TableItem>
+                    <TableItem width={25}>{person.cpf}</TableItem>
+                    <TableItem width={25}>{person.createdAt}</TableItem>
+                </TableRow>
+            ))}
         </Table>
     )
 }
