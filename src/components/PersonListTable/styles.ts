@@ -6,7 +6,7 @@ export const Table = styled.table`
     border: 1px solid #b3b3b3;
     border-radius: 4px;
     box-shadow: 5px 4px 17px -7px rgba(0,0,0,0.52);
-    background-color: #a9a9a9;
+    background-color: #718C9E;
 `
 
 export const TableHeadRow = styled.tr`

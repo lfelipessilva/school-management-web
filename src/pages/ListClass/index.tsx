@@ -2,19 +2,19 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Container, Title, Content } from './styles'
-import { Teacher } from '../../types/Teacher'
+import { Student } from '../../types/Student'
 import { PersonListTable } from '../../components/PersonListTable'
 import { CreatePerson } from '../../components/CreatePerson'
 import { SideBar } from '../../components/SideBar'
 
-export const ListTeacher = () => {
+export const ListClass = () => {
 
-    const [teachers, setTeachers] = useState<Teacher[]>([])
+    const [students, setStudents] = useState<Student[]>([])
 
     useEffect(() => {
         async function getStudents() {
-            const getTeachers = await axios.get<Teacher[]>('http://localhost:3001/teacher')
-            setTeachers(getTeachers.data)
+            const getStudents = await axios.get<Student[]>('http://localhost:3001/student')
+            setStudents(getStudents.data)
         }
 
         getStudents()
@@ -25,13 +25,15 @@ export const ListTeacher = () => {
         <Container>
             <SideBar />
             <Content>
+
                 <Title>
-                    Professores Cadastrados
+                    Estudantes Cadastrados
                 </Title>
 
-                <PersonListTable people={teachers} />
+                <PersonListTable people={students} />
 
-                <CreatePerson personType={'teacher'} />
+                <CreatePerson personType={'student'} />
+
             </Content>
         </Container>
     )

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div<{active: boolean}>`
+export const Container = styled.div`
 
     width: 90px;
     transition: 300ms;
@@ -24,14 +24,14 @@ export const Container = styled.div<{active: boolean}>`
 
     .navbar {
         height: 100vh;
-        background-color: #F4EBD0;
+        background-color: #C0C2C9;
     }
 
     .react-icons {
         margin: 5px;
         height: 85px;
         width: 85px;
-        color: black;
+        color: #36454F;
     }
 
     .link-class {
