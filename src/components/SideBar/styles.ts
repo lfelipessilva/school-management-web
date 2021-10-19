@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-    width: 90px;
+    width: 100px;
     transition: 300ms;
 
     p { 
@@ -10,10 +10,11 @@ export const Container = styled.div`
     }
 
     &:hover {
-        width: 200px;
+        width: 220px;
         p { 
-            padding: 0px;
-            margin: 5px;
+            padding: 4.5px;
+            margin-top: -55px;
+            margin-left: 80px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,14 +29,15 @@ export const Container = styled.div`
     }
 
     .react-icons {
-        margin: 5px;
+        display: block;
+        margin: 0px 5px 0px 5px;
         height: 85px;
         width: 85px;
         color: #36454F;
     }
 
     .link-class {
-        display: flex;
+        display: absolute;
         height: 90px;
         text-decoration: none;
     }
