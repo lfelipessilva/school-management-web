@@ -7,6 +7,7 @@ export const Container = styled.div`
 
     p { 
         display: none;
+
     }
 
     &:hover {
@@ -37,9 +38,22 @@ export const Container = styled.div`
     }
 
     .link-class {
-        display: absolute;
-        height: 90px;
         text-decoration: none;
     }
 
 `   
+
+export const LinkArea = styled.div`
+    display: absolute;
+    height: 90px;
+
+    &:hover {
+        .react-icons {
+            color: #FFF;
+        }
+
+        p{
+            color: #FFF;
+        }
+    }
+`

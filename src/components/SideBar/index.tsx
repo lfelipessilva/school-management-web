@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Container } from './styles'
+import { Container, LinkArea } from './styles'
 
 import { IconContext } from 'react-icons';
 import { BsFillPersonFill } from 'react-icons/bs'
@@ -13,18 +13,24 @@ export const SideBar = () => {
             <nav className='navbar'>
                 <IconContext.Provider value={{className: 'react-icons'}}>
                     <Link className='link-class' to="/student">
-                        <BsFillPersonFill/>
-                        <p>Estudantes</p>
+                        <LinkArea>
+                            <BsFillPersonFill/>
+                            <p>Estudantes</p>
+                        </LinkArea>
                     </Link>
                 
                     <Link className='link-class' to="/teacher">
-                        <GiTeacher />
-                        <p>Professores</p>
+                        <LinkArea>
+                            <GiTeacher />
+                            <p>Professores</p>
+                        </LinkArea>
                     </Link>
 
                     <Link className='link-class' to="/class">
-                        <SiGoogleclassroom />
-                        <p>Turmas</p>
+                        <LinkArea>
+                            <SiGoogleclassroom />
+                            <p>Turmas</p>
+                        </LinkArea>
                     </Link> 
                 </IconContext.Provider>
             </nav>

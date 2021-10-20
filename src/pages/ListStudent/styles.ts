@@ -5,7 +5,7 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
-    background: #5298C1;
+    background: #f4f4f4;
     flex: 1;
 `
 
