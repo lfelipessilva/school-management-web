@@ -6,10 +6,12 @@ export const Container = styled.div`
     
     >input {
         font-size: 15px;
-        margin: 10px;
         width: 250px;
         height: 25px;
         padding: 5px;
+        outline: none;
+        border: 0;
+        border-bottom: 1px solid #9e9e9e;
     }
 
     >button {
@@ -19,5 +21,17 @@ export const Container = styled.div`
         height: 39px;
         padding: 5px;
     }
-`
 
+    .react-icons {
+        height: 30px;
+        width: 30px;
+        vertical-align: middle;
+        margin-left: 10px;
+        color: #9e9e9e;
+        cursor: pointer;
+        &:hover {
+            color: #666;
+            transition: 200ms;
+        }
+    }
+`

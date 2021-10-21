@@ -4,7 +4,7 @@ import axios from 'axios'
 import { Container, Title, Content } from './styles'
 import { Teacher } from '../../types/Teacher'
 import { PersonListTable } from '../../components/PersonListTable'
-import { CreatePerson } from '../../components/CreatePerson'
+import { AddPerson } from '../../components/AddPerson'
 import { SideBar } from '../../components/SideBar'
 
 export const ListTeacher = () => {
@@ -31,7 +31,7 @@ export const ListTeacher = () => {
 
                 <PersonListTable people={teachers} />
 
-                <CreatePerson personType={'teacher'} />
+                <AddPerson personType={'teacher'} />
             </Content>
         </Container>
     )

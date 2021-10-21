@@ -10,6 +10,7 @@ export const PersonListTable = ({ people }: Props) => {
         <Table>
             <thead>
             <TableHeadRow>
+                {console.log(people)}
                 <TableHead width={25}>Id</TableHead>
                 <TableHead width={25}>Nome</TableHead>
                 <TableHead width={25}>CPF</TableHead>
