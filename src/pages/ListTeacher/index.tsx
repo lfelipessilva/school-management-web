@@ -1,10 +1,11 @@
 
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Container, Title, Content } from './styles'
+import { Container, Title, Content, OptionsArea } from './styles'
 import { Teacher } from '../../types/Teacher'
 import { PersonListTable } from '../../components/PersonListTable'
 import { AddPerson } from '../../components/AddPerson'
+import { SearchPerson } from '../../components/SearchPerson'
 import { SideBar } from '../../components/SideBar'
 
 export const ListTeacher = () => {
@@ -20,6 +21,9 @@ export const ListTeacher = () => {
         getStudents()
     }, [])
 
+    const changePeople = (teachers: Teacher[]) => {
+        setTeachers(teachers)
+    }
 
     return (
         <Container>
@@ -29,9 +33,12 @@ export const ListTeacher = () => {
                     Professores Cadastrados
                 </Title>
 
-                <PersonListTable people={teachers} />
+                <OptionsArea>
+                    <SearchPerson personType={'teacher'} changePeople={changePeople} />
+                    <AddPerson personType={'teacher'} />
+                </OptionsArea>
 
-                <AddPerson personType={'teacher'} />
+                <PersonListTable people={teachers} />
             </Content>
         </Container>
     )

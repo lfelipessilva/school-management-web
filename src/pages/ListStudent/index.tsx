@@ -21,7 +21,7 @@ export const ListStudent = () => {
     }, [])
 
 
-    const changeStudents = (students: Student[]) => {
+    const changePeople = (students: Student[]) => {
         setStudents(students)
     }
 
@@ -35,9 +35,8 @@ export const ListStudent = () => {
                 </Title>
 
                 <OptionsArea>
-                    <SearchPerson personType={'student'} changeStudents={changeStudents}/>
+                    <SearchPerson personType={'student'} changePeople={changePeople}/>
                     <AddPerson personType={'student'} />
-                    {/* <SearchPerson personType={'student'}/> */}
                 </OptionsArea>
 
                 <PersonListTable people={students} />

@@ -12,3 +12,11 @@ export const Content = styled.div`
 export const Title = styled.h1`
     text-align: center;
 `
+
+export const OptionsArea = styled.div`
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+`

@@ -6,26 +6,26 @@ import { AiOutlineSearch } from 'react-icons/ai'
 
 type Props = {
     personType: String;
-    changeStudents: any;
+    changePeople: any;
 }
 
-export const SearchPerson = ({ personType, changeStudents }: Props) => {
+export const SearchPerson = ({ personType, changePeople }: Props) => {
 
     const [name, setName] = useState('')
     
     useEffect(() => {
         const searchPerson = async () => {
                 if(name !== '') {
-                        const request = await axios.get(`http://localhost:3001/student/name/${name}`)
-                        changeStudents(request.data)
+                    const request = await axios.get(`http://localhost:3001/${personType}/name/${name}`)
+                    changePeople(request.data)
                 } else {
-                    const request = await axios.get(`http://localhost:3001/student/`)
-                    changeStudents(request.data)
+                    const request = await axios.get(`http://localhost:3001/${personType}/`)
+                    changePeople(request.data)
                 }
         }
 
         searchPerson()
-    }, [changeStudents, name])
+    }, [changePeople, name, personType])
 
     return (
         <Container>
